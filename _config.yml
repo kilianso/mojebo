@@ -1,0 +1,18 @@
+
+# Where all of your source 
+# pug/HTML/includes/layouts 
+# will be
+source: src
+
+# Where your compiled 
+# files will output to.
+destination: dist
+
+# Enabling the livereload
+# plugin by default.
+livereload: true
+
+# Setting our sass 
+# directory.
+sass:
+    sass_dir: static/css
