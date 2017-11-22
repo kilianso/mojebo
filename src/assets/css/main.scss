@@ -1,0 +1,48 @@
+---
+---
+
+//Importing normalize.scss
+
+@import "_normalize";
+
+//Custom J5 styling - Feel free to remove
+
+body,
+html {
+	margin: 0;
+	height: 100%;
+
+	.full-page {
+		display: inline-block;
+		font-family: sans-serif;
+		width: 100%;
+		height: 100%;
+		background: #a86454;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		color: white;
+	}
+
+	h1,
+	h2 {
+		max-width: 750px;
+		text-align: center;
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 150px;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		font-weight: 100;
+	}
+
+	h2 {
+		font-size: 60px;
+		font-family: serif;
+		text-transform: lowercase;
+	}
+}
+// Enter your CSS Code here.

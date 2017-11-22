@@ -1,10 +1,10 @@
 
-# Where all of your source 
-# pug/HTML/includes/layouts 
+# Where all of your source
+# pug/HTML/includes/layouts
 # will be
 source: src
 
-# Where your compiled 
+# Where your compiled
 # files will output to.
 destination: dist
 
@@ -12,7 +12,12 @@ destination: dist
 # plugin by default.
 livereload: true
 
-# Setting our sass 
+# Setting our sass
 # directory.
 sass:
-    sass_dir: static/css
+    sass_dir: assets/css
+
+# use modern JS and minification
+plugins:
+  - jekyll-babel
+  - jekyll-autoprefixer
