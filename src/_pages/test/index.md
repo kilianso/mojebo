@@ -1,6 +1,5 @@
 ---
-title: Tschou
-permalink: "/test/baaa"
+title: hmmm
 ---
 
 # yo

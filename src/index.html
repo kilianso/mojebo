@@ -5,6 +5,36 @@ description: A Jekyll, Pug, Sass, and Livereload HTML5 Boilerplate
 layout: layout
 ---
 
+
+<nav class="nav-context">
+  <div class="container">
+    <ol class="nav-context__list">
+      {% for nav_item in site.pages %}
+          {% comment %}
+            Check if the it is the current page or the child of a page.
+          {% endcomment %}
+          {% assign url_split_nav_item = nav_item.url | split: "/" %}
+          {% assign url_split_page = page.url | split: "/" %}
+
+          {% assign currentPageClass = 'is-active' %}
+
+          {% comment %}
+            Since the project page is also the index page (/), we need to use another handling for this
+          {% endcomment %}
+
+          {% capture ifCurrentPage %}{% if url_split_nav_item[1] == url_split_page[1] %}{{ currentPageClass }}{% endif %}{% endcapture %}
+
+          <li class="nav-context__item">
+            <a class="nav-context__link {{ ifCurrentPage }}" href="{{ site.baseurl }}{{ nav_item.url }}">
+              {{ nav_item.title }}
+            </a>
+          </li>
+        {% endfor %}
+    </ol>
+  </div>
+</nav>
+
+
 <div class="full-page">
 	<h1>{{page.title}}</h1>
 	<h2>{{page.description}}</h2>
