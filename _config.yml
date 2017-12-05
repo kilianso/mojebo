@@ -1,3 +1,6 @@
+# Inlcude _pages
+include: ["_pages"]
+permalink: pretty
 
 # Where all of your source
 # pug/HTML/includes/layouts
