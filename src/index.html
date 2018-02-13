@@ -17,3 +17,13 @@ position_in_mainnav: 1
 
 <!-- Output all posts -->
 {{site.posts}}
+
+<!-- List of all posts -->
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
