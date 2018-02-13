@@ -1,6 +1,8 @@
 # Inlcude _pages
 include: ["_pages"]
-permalink: pretty
+
+# No dates in URL's
+permalink: /:title/
 
 # Where all of your source
 # pug/HTML/includes/layouts
@@ -9,7 +11,8 @@ source: src
 
 # Where your compiled
 # files will output to.
-destination: dist
+# default is site you can change it like this:
+# destination: dist
 
 # Enabling the livereload
 # plugin by default.
