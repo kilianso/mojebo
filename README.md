@@ -9,6 +9,7 @@
 3. Make sure you have current versions of [Ruby](https://www.ruby-lang.org/en/downloads/) and [Rubygems](https://rubygems.org/pages/download) installed.
 4. Type the command `gem install jekyll bundler`
 5. Then, run the command `bundle install`
+6. If you have any installation issues on MacOS [check this](https://stackoverflow.com/a/26600110)
 
 ## How develop and build?
 
