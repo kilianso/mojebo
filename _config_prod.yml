@@ -13,10 +13,6 @@ source: src
 # files will output to.
 destination: dist
 
-# Enabling the livereload
-# plugin by default.
-livereload: true
-
 # Setting our sass
 # directory.
 sass:
@@ -26,4 +22,3 @@ sass:
 plugins:
   - jekyll-babel
   - jekyll-autoprefixer
-  - uglifier

@@ -14,6 +14,7 @@
 ## How develop and build?
 
 1. To run a local development server type `bundle exec jekyll serve` or simply `jekyll serve`.
+2. Add a flag for live reloading while development like this: `jekyll serve --livereload`
 2. Run `jekyll build --config "_config.yml, _config_prod.yml"` to run a build with minified SASS.
 
 ## What tools are included?
@@ -32,7 +33,7 @@
 - Frontmatter examples.
 - Simple Mainnavigation based on pages with active state.
 - Index file with basic output of all
-- Useful of comments and explanations.
+- Useful of comments and explanations.y
 
 ## Sass Tip
 
