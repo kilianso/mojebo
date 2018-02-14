@@ -21,9 +21,9 @@ livereload: true
 # directory.
 sass:
     sass_dir: assets/css
-    style: full
-
+    style: compressed
 # use modern JS and minification
 plugins:
   - jekyll-babel
   - jekyll-autoprefixer
+  - uglifier
