@@ -1,5 +1,3 @@
-<img src="/static/img/favicon.png" width="100"/>
-
 # Mojebo -  Modern Jekyll Boilerplate
 
 **Start your Jekyll project with this straightforward, minimalistic and modern boilerplate.**
