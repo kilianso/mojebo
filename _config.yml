@@ -1,6 +1,9 @@
 # Inlcude _pages
 include: ["_pages"]
 
+# Exclude _webpack fro jekyll watching
+exclude: ["_webpack"]
+
 # No dates in URL's
 permalink: /:title/
 
@@ -17,9 +20,7 @@ destination: dist
 # directory.
 sass:
     sass_dir: assets/css
-    style: full
+    # style: compressed
 
-# use modern JS and minification
 plugins:
-  - jekyll-babel
-  - jekyll-autoprefixer
+- jekyll-autoprefixer
