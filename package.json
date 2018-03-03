@@ -1,0 +1,27 @@
+{
+  "name": "mojebo",
+  "version": "1.0.0",
+  "description": "**Start your Jekyll project with this straightforward, minimalistic and modern boilerplate.**",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack --watch --mode development & jekyll serve --livereload",
+    "build": "webpack -p --mode production & jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilianso/mojebo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kilianso/mojebo/issues"
+  },
+  "homepage": "https://github.com/kilianso/mojebo#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^4.0.1"
+  }
+}
