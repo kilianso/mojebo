@@ -9,7 +9,6 @@
 3. Make sure you have current versions of [Ruby](https://www.ruby-lang.org/en/downloads/), [Rubygems](https://rubygems.org/pages/download) and [NPM](https://www.npmjs.com) installed.
 4. Type the command `gem install jekyll bundler`
 5. Then, run the command `bundle install && npm install` (Run both commands one by one if you are on Windows)
-6. If you have any installation issues on MacOS [check this](https://stackoverflow.com/a/26600110)
 
 ## How develop and build?
 
@@ -49,3 +48,7 @@ So, with Mojebo we are using *Babel and Webpack* to transpile and bundle modern 
 ## Todos
 
 - Add sourcemaps for SCSS
+
+## Help
+- If you have any installation issues on MacOS [check this](https://stackoverflow.com/a/26600110)
+- If you run into a no-acceptor issue (port in use) [check this](https://gist.github.com/whomwah/6068816)
