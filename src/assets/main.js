@@ -109,9 +109,10 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
   !*** ./src/_webpack/js/components/test.js ***!
   \********************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("var go = () => {\n\treturn 'test';\n};\nconsole.log(go());\n\n//# sourceURL=webpack:///./src/_webpack/js/components/test.js?");
+"use strict";
+eval("\n\nvar go = function go() {\n\treturn 'test';\n};\nconsole.log(go());\n\n//# sourceURL=webpack:///./src/_webpack/js/components/test.js?");
 
 /***/ }),
 
@@ -119,11 +120,11 @@ eval("var go = () => {\n\treturn 'test';\n};\nconsole.log(go());\n\n//# sourceUR
 /*!**********************************!*\
   !*** ./src/_webpack/js/entry.js ***!
   \**********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/_webpack/scss/main.scss\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_test__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/test */ \"./src/_webpack/js/components/test.js\");\n/* harmony import */ var _components_test__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_test__WEBPACK_IMPORTED_MODULE_1__);\n// Styles\n\n\n// JS\n\n\n// Node modules\n// import 'swiper'\n\n//# sourceURL=webpack:///./src/_webpack/js/entry.js?");
+eval("\n\n__webpack_require__(/*! ../scss/main.scss */ \"./src/_webpack/scss/main.scss\");\n\n__webpack_require__(/*! ./components/test */ \"./src/_webpack/js/components/test.js\");\n\n//# sourceURL=webpack:///./src/_webpack/js/entry.js?");
 
 /***/ }),
 
