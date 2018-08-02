@@ -1,25 +1,33 @@
-var webpack = require('webpack');
-
-var config = {
-  context: __dirname + '/src', // `__dirname` is root of project and `src` is source
-  entry: {
-    app: './_webpack/js/entry.js',
-  },
+// webpack v4
+const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+module.exports = {
+  entry: { main: './src/_webpack/js/entry.js' },
   output: {
-    path: __dirname + '/src/assets/js', // `dist` is the destination
-    filename: 'main.js',
-		publicPath: "/assets",
+    path: path.resolve(__dirname, './src/assets'),
+    filename: '[name].js'
   },
-	module: {
+  module: {
     rules: [
       {
-        test: /\.js$/, //Check for all js files
-        loader: 'babel-loader',
-        query: {
-          presets: [ "babel-preset-es2015" ].map(require.resolve)
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [ "babel-preset-es2015" ].map(require.resolve)
+          }
         }
       },
+      {
+        test: /\.scss$/,
+        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      }
     ]
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'main.css',
+    }),
+  ]
 };
-module.exports = config;

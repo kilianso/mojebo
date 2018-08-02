@@ -7,20 +7,27 @@ exclude: ["_webpack"]
 # No dates in URL's
 permalink: /:title/
 
-# Where all of your source
-# pug/HTML/includes/layouts
-# will be
+# Where all of your Markup and HTML files are. (Assets like JS and SCSS are handeled by Webpack)
 source: src
 
-# Where your compiled
-# files will output to.
+# Where your compiled files will be outputted to.
 destination: dist
 
-# Setting our sass
-# directory.
-sass:
-    sass_dir: assets/css
-    # style: compressed
-
+# use Jekyll autoprefixer
 plugins:
-- jekyll-autoprefixer
+  - jekyll-autoprefixer
+
+# Default variables, you can overwrite them in posts or pages frontmatter
+title: The Page Title
+ogimage: urltosuperfancyimage.jpg
+description: The page description
+
+# Editor config options for Cloudcannon
+_options:
+  content:
+    styles: /src/assets/css/wysiwyg.css
+    bold: true
+    italic: true
+    link: true
+    numeredlist: true
+    bulletlist: true
