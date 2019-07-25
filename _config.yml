@@ -1,7 +1,7 @@
 # Inlcude _pages
 include: ["_pages"]
 
-# Exclude _webpack fro jekyll watching
+# Exclude _webpack from jekyll watching
 exclude: ["_webpack"]
 
 # No dates in URL's
@@ -13,9 +13,15 @@ source: src
 # Where your compiled files will be outputted to.
 destination: dist
 
-# use Jekyll autoprefixer
-plugins:
-  - jekyll-autoprefixer
+# Setting our sass directory.
+sass:
+  load_paths:
+    - assets/css
+    - _includes
+  # style: compressed
+
+# bind to all IPs, rather than just to localhost
+host: 127.0.0.1
 
 # Default variables, you can overwrite them in posts or pages frontmatter
 title: The Page Title

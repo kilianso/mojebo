@@ -6,20 +6,20 @@
 
 1. Clone this git repository into your project directory.
 2. Open a terminal and navigate into that directory.
-3. Make sure you have current versions of [Ruby](https://www.ruby-lang.org/en/downloads/), [Rubygems](https://rubygems.org/pages/download) and [NPM](https://www.npmjs.com) installed.
+3. Make sure you have current versions of [Ruby](https://www.ruby-lang.org/en/downloads/), [Rubygems](https://rubygems.org/pages/download) and [NPM](https://www.npmjs.com) or [YARN](https://yarnpkg.con) installed.
 4. Type the command `gem install jekyll bundler`
-5. Then, run the command `bundle install && npm install` (Run both commands one by one if you are on Windows)
+5. Then, run the command `bundle install && yarn install` (Run both commands one by one if you are on Windows)
 
 ## How develop and build?
 
-2. Run `npm run build` once initially to create all assets.
-2. To run a local development server type `npm start` - then open localhost:4000.
-2. Run `npm run build` to run a build for production.
+2. Run `yarn run build` once initially to create all assets.
+2. To run a local development server type `yarn start` - then open localhost:4000.
+2. Run `yarn run build` to run a build for production.
 
 ## What tools are included?
 
 - Babel / ES6 Compiling
-- Webpack for bundling
+- Webpack
 - Livereload
 - Autoprefixer
 - Normalize
@@ -27,7 +27,7 @@
 
 ## What's preconfigured / setup?
 
-- Renaming and structuring into folders into `src` and `dist` for better overview.
+- Renamed default Jekyll folders to `src` and `dist` for better overview.
 - Put pages into `_pages` subfolder for better overview.
 - Useful folder structure with minimalistic demo content.
 - Frontmatter examples.

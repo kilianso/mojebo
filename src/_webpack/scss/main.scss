@@ -1,10 +1,7 @@
 //# sourceMappingURL=./main.css.map
 
 // Import vendor
-@import "vendor/_normalize";
+@import "../../../node_modules/normalize.css/normalize.css";
 
 // Import components
 @import "components/_global";
-
-// Node
-// @import "../../../node_modules/swiper/dist/css/swiper"
