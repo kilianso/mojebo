@@ -35,7 +35,7 @@ module.exports = {
 				use: {
 					loader: "babel-loader",
 					options: {
-						presets: ["babel-preset-env"].map(require.resolve),
+						presets: ["@babel/preset-env"].map(require.resolve),
 						plugins: ["@babel/plugin-transform-spread"]
 					}
 				}
