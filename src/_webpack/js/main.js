@@ -2,7 +2,7 @@
 import "../scss/main.scss";
 
 // JS
-import './components/demo'
+import './modules/demo'
 
 // Node modules
 // import 'swiper'

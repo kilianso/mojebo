@@ -17,7 +17,6 @@ destination: dist
 sass:
   load_paths:
     - assets/css
-    - _includes
   # style: compressed
 
 # bind to all IPs, rather than just to localhost

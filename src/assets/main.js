@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/_webpack/js/entry.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/_webpack/js/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -119,27 +119,27 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 
 /***/ }),
 
-/***/ "./src/_webpack/js/components/demo.js":
-/*!********************************************!*\
-  !*** ./src/_webpack/js/components/demo.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Demo; });\n/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/helpers */ \"./src/_webpack/js/util/helpers.js\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\n\n\nvar Demo =\n/*#__PURE__*/\nfunction () {\n  function Demo(element) {\n    _classCallCheck(this, Demo);\n\n    //setup\n    this.el = element; //init\n\n    this.init();\n  }\n\n  _createClass(Demo, [{\n    key: \"init\",\n    value: function init() {\n      Object(_util_helpers__WEBPACK_IMPORTED_MODULE_0__[\"help\"])('run some additional helper functions');\n      console.log('new instance was created based on element:', this.el);\n    }\n  }]);\n\n  return Demo;\n}();\n\n\nObject(_util_helpers__WEBPACK_IMPORTED_MODULE_0__[\"initOnReady\"])('.js-demo', Demo);\n\n//# sourceURL=webpack:///./src/_webpack/js/components/demo.js?");
-
-/***/ }),
-
-/***/ "./src/_webpack/js/entry.js":
-/*!**********************************!*\
-  !*** ./src/_webpack/js/entry.js ***!
-  \**********************************/
+/***/ "./src/_webpack/js/main.js":
+/*!*********************************!*\
+  !*** ./src/_webpack/js/main.js ***!
+  \*********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/_webpack/scss/main.scss\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_demo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/demo */ \"./src/_webpack/js/components/demo.js\");\n// Styles - webpack will handover the styles to the jekyll assets folder\n // JS\n\n // Node modules\n// import 'swiper'\n\n//# sourceURL=webpack:///./src/_webpack/js/entry.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/_webpack/scss/main.scss\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_demo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/demo */ \"./src/_webpack/js/modules/demo.js\");\n// Styles - webpack will handover the styles to the jekyll assets folder\n // JS\n\n // Node modules\n// import 'swiper'\n\n//# sourceURL=webpack:///./src/_webpack/js/main.js?");
+
+/***/ }),
+
+/***/ "./src/_webpack/js/modules/demo.js":
+/*!*****************************************!*\
+  !*** ./src/_webpack/js/modules/demo.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Demo; });\n/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/helpers */ \"./src/_webpack/js/util/helpers.js\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\n\n\nvar Demo =\n/*#__PURE__*/\nfunction () {\n  function Demo(element) {\n    _classCallCheck(this, Demo);\n\n    //setup\n    this.el = element; //init\n\n    this.init();\n  }\n\n  _createClass(Demo, [{\n    key: \"init\",\n    value: function init() {\n      Object(_util_helpers__WEBPACK_IMPORTED_MODULE_0__[\"help\"])('run some additional helper functions');\n      console.log('new instance was created based on element:', this.el);\n    }\n  }]);\n\n  return Demo;\n}();\n\n\nObject(_util_helpers__WEBPACK_IMPORTED_MODULE_0__[\"initOnReady\"])('.js-demo', Demo);\n\n//# sourceURL=webpack:///./src/_webpack/js/modules/demo.js?");
 
 /***/ }),
 
