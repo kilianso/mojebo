@@ -1,8 +1,8 @@
-// Styles
+// Styles - webpack will handover the styles to the jekyll assets folder
 import "../scss/main.scss";
 
 // JS
-import './components/test'
+import './components/demo'
 
 // Node modules
 // import 'swiper'

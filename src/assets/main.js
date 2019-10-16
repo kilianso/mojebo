@@ -119,15 +119,15 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 
 /***/ }),
 
-/***/ "./src/_webpack/js/components/test.js":
+/***/ "./src/_webpack/js/components/demo.js":
 /*!********************************************!*\
-  !*** ./src/_webpack/js/components/test.js ***!
+  !*** ./src/_webpack/js/components/demo.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar go = function go() {\n  return 'test';\n};\n\nconsole.log(go());\n\n//# sourceURL=webpack:///./src/_webpack/js/components/test.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Demo; });\n/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/helpers */ \"./src/_webpack/js/util/helpers.js\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\n\n\nvar Demo =\n/*#__PURE__*/\nfunction () {\n  function Demo(element) {\n    _classCallCheck(this, Demo);\n\n    //setup\n    this.el = element; //init\n\n    this.init();\n  }\n\n  _createClass(Demo, [{\n    key: \"init\",\n    value: function init() {\n      Object(_util_helpers__WEBPACK_IMPORTED_MODULE_0__[\"help\"])('run some additional helper functions');\n      console.log('new instance was created based on element:', this.el);\n    }\n  }]);\n\n  return Demo;\n}();\n\n\nObject(_util_helpers__WEBPACK_IMPORTED_MODULE_0__[\"initOnReady\"])('.js-demo', Demo);\n\n//# sourceURL=webpack:///./src/_webpack/js/components/demo.js?");
 
 /***/ }),
 
@@ -135,11 +135,23 @@ eval("\n\nvar go = function go() {\n  return 'test';\n};\n\nconsole.log(go());\n
 /*!**********************************!*\
   !*** ./src/_webpack/js/entry.js ***!
   \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ../scss/main.scss */ \"./src/_webpack/scss/main.scss\");\n\n__webpack_require__(/*! ./components/test */ \"./src/_webpack/js/components/test.js\");\n\n//# sourceURL=webpack:///./src/_webpack/js/entry.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/_webpack/scss/main.scss\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_demo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/demo */ \"./src/_webpack/js/components/demo.js\");\n// Styles - webpack will handover the styles to the jekyll assets folder\n // JS\n\n // Node modules\n// import 'swiper'\n\n//# sourceURL=webpack:///./src/_webpack/js/entry.js?");
+
+/***/ }),
+
+/***/ "./src/_webpack/js/util/helpers.js":
+/*!*****************************************!*\
+  !*** ./src/_webpack/js/util/helpers.js ***!
+  \*****************************************/
+/*! exports provided: help, initOnReady */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"help\", function() { return help; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"initOnReady\", function() { return initOnReady; });\nfunction help(args) {\n  return console.log(args);\n}\nfunction initOnReady(element, instance) {\n  document.addEventListener('DOMContentLoaded', function () {\n    var elements = document.querySelectorAll(element);\n\n    if (elements) {\n      elements.forEach(function (el) {\n        new instance(el);\n      });\n    }\n  });\n}\n\n//# sourceURL=webpack:///./src/_webpack/js/util/helpers.js?");
 
 /***/ }),
 
