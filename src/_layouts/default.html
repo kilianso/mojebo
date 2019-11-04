@@ -11,11 +11,21 @@
 
 	<link rel="apple-touch-icon" href="{{ site.url }}/assets/img/favicon.png">
 	<link rel="icon" type="image/png" href="{{ site.url }}/assets/img/favicon.png">
-	<link rel="stylesheet", href="{{ site.url }}/assets/main.css">
+
+	{% if jekyll.environment == "development" %}
+	<link rel="stylesheet" href="{{ site.url }}/assets/main.dev.css?{{site.time | date: '%s%N'}}">
+	{% else %}
+	<link rel="stylesheet" href="{{ site.url }}/assets/main.css?{{site.time | date: '%s%N'}}">
+	{% endif %}
 </head>
 <body>
 	{{content}}
 	{{site.data.content[0].text}}
-	<script src="{{ site.url }}/assets/main.js"></script>
+
+	{% if jekyll.environment == "development" %}
+	<script src="{{ site.url }}/assets/main.dev.js?{{site.time | date: '%s%N'}}"></script>
+	{% else %}
+	<script src="{{ site.url }}/assets/main.js?{{site.time | date: '%s%N'}}"></script>
+	{% endif %}
 </body>
 </html>

@@ -1,7 +1,8 @@
-//# sourceMappingURL=./main.css.map
-
 // Import vendor
 @import "../../../node_modules/normalize.css/normalize.css";
 
-// Import components
-@import "modules/_global";
+// Import global settings/mixins/styles
+@import "fonts";
+@import "global";
+
+// Import modules that aren't imported via JS here
