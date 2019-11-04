@@ -1,3 +1,7 @@
+if (!Element.prototype.matches) {
+	Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+}
+
 class ModuleManager {
 	constructor(target){
 		this._onChange = this._onChange.bind(this);
@@ -15,9 +19,10 @@ class ModuleManager {
 		this._selectors.set(selector, module);
 		const elements = document.querySelectorAll(selector);
 		if(elements){
-			elements.forEach((el) => {
+			for (let i = 0, len = elements.length; i < len; i++){
+				let el = elements[i];
 				this.registerInstance(el, new module(el));
-			});
+			}
 		}
 	}
 
