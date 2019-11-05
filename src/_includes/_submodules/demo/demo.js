@@ -6,7 +6,7 @@ import { initOnReady } from '_js/util/helpers';
 let counter = 0;
 
 const removeHandler = (e) => {
-	const node = e.target.closest('.js-demo');
+	const node = e.currentTarget.parentNode;
 	if (node) {
 		node.parentNode.removeChild(node);
 	}

@@ -20,8 +20,7 @@ class ModuleManager {
 		const elements = document.querySelectorAll(selector);
 		if(elements){
 			for (let i = 0, len = elements.length; i < len; i++){
-				let el = elements[i];
-				this.registerInstance(el, new module(el));
+				this.registerInstance(elements[i], new module(elements[i]));
 			}
 		}
 	}
@@ -31,26 +30,29 @@ class ModuleManager {
 	}
 
 	_onChange(mutationsList, observer) {
-		for(let mutation of mutationsList) {
+		for (let i = 0, len = mutationsList.length; i < len; i++) {
+			let mutation = mutationsList[i];
 			if (mutation.type !== 'childList') {
 				continue;
 			}
-			for (let node of mutation.removedNodes) {
-				this._applyNested(node, 'destroy');
+
+			for (let k = 0, l = mutation.removedNodes.length; k < l; k++) {
+				this._applyNested(mutation.removedNodes[k], true);
 			}
-			for (let node of mutation.addedNodes) {
-				this._applyNested(node);
+
+			for (let k = 0, l = mutation.addedNodes.length; k < l; k++) {
+				this._applyNested(mutation.addedNodes[k]);
 			}
 		}
 	}
 
-	_applyNested(node, mode = 'add') {
+	_applyNested(node, destroy = false) {
 		if (node.nodeType === Node.ELEMENT_NODE) {
-			node.childNodes.forEach(node => {
-				this._applyNested(node, mode);
-			});
+			for (let i = 0, len = node.childNodes.length; i < len; i++) {
+				this._applyNested(node.childNodes[i], destroy);
+			}
 
-			if (mode === 'destroy') {
+			if (destroy) {
 				if (this._instances.has(node)) {
 					const instance = this._instances.get(node);
 					if (typeof instance.destroy === 'function') {
@@ -59,13 +61,13 @@ class ModuleManager {
 					console.log("❌ removed", node);
 					this._instances.delete(node);
 				}
-			} else if (mode === 'add') {
-				for (let [selector, module] of this._selectors) {
+			} else {
+				this._selectors.forEach( (module, selector) => {
 					if (node.matches(selector)) {
 						this.registerInstance(node, new module(node));
 						console.log("✅ added", selector, node);
 					}
-				}
+				});
 			}
 		}
 	}
