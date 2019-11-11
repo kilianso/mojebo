@@ -1,5 +1,7 @@
+@import "~_scss/settings";
+
 .js-demo {
-	border: 1px dotted red;
+	border: 1px dotted $c-red;
 	padding: 10px;
 	// Demo of inline content. See generated CSS
 	background: transparent url("~_assets/inline/stripes.png");
