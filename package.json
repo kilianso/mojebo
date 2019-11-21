@@ -1,47 +1,49 @@
 {
-  "name": "mojebo",
-  "version": "1.0.0",
-  "description": "**Start your Jekyll project with this straightforward, minimalistic and modern boilerplate.**",
-  "main": "webpack.config.js",
-  "scripts": {
-    "start": "webpack --watch --mode development & bundle exec jekyll serve --livereload",
-    "build": "NODE_ENV=production webpack -p --mode production && bundle exec jekyll build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kilianso/mojebo.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kilianso/mojebo/issues"
-  },
-  "homepage": "https://github.com/kilianso/mojebo#readme",
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-transform-spread": "^7.2.2",
-    "@babel/preset-env": "^7.6.3",
-    "autoprefixer": "^9.6.1",
-    "babel-loader": "^8.0.6",
-    "base64-inline-loader": "^1.1.1",
-    "css-loader": "^3.1.0",
-    "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "postcss-loader": "^3.0.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.1.3",
-    "webpack": "^4.37.0",
-    "webpack-cli": "^3.3.6"
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1"
-  },
-  "browserslist": [
-    "last 3 versions",
-    "IE 11",
-    "iOS 9"
-  ]
+	"name": "mojebo",
+	"version": "1.0.0",
+	"description": "**Start your Jekyll project with this straightforward, minimalistic and modern boilerplate.**",
+	"main": "webpack.config.js",
+	"scripts": {
+		"start": "webpack --watch --mode development & bundle exec jekyll serve --livereload",
+		"webpack-build": "NODE_ENV=production webpack -p --mode production",
+		"jekyll-build": "JEKYLL_ENV=production bundle exec jekyll build",
+		"build": "yarn run webpack-build && yarn run jekyll-build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kilianso/mojebo.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/kilianso/mojebo/issues"
+	},
+	"homepage": "https://github.com/kilianso/mojebo#readme",
+	"devDependencies": {
+		"@babel/core": "^7.6.4",
+		"@babel/plugin-transform-spread": "^7.6.2",
+		"@babel/preset-env": "^7.6.3",
+		"autoprefixer": "^9.7.1",
+		"babel-loader": "^8.0.6",
+		"base64-inline-loader": "^1.1.1",
+		"css-loader": "^3.2.0",
+		"mini-css-extract-plugin": "^0.8.0",
+		"node-sass": "^4.12.0",
+		"optimize-css-assets-webpack-plugin": "^5.0.3",
+		"postcss-loader": "^3.0.0",
+		"sass-loader": "^8.0.0",
+		"style-loader": "^1.0.0",
+		"terser-webpack-plugin": "^2.1.3",
+		"webpack": "^4.41.2",
+		"webpack-cli": "^3.3.10"
+	},
+	"dependencies": {
+		"normalize.css": "^8.0.1"
+	},
+	"browserslist": [
+		"last 3 versions",
+		"IE 11",
+		"iOS 9"
+	]
 }

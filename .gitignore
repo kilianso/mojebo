@@ -4,3 +4,7 @@ _site
 dist
 node_modules
 Gemfile.lock
+/src/assets/*.dev.css
+/src/assets/*.dev.js
+/src/assets/*.dev.js.map
+/src/assets/*.dev.css.map

@@ -1,0 +1,16 @@
+@import "settings";
+
+
+* {
+	box-sizing: border-box;
+}
+// Enter your CSS Code here.
+
+body {
+	color: $c-black;
+	background: $c-white;
+}
+
+a.active {
+	color: $c-red;
+}

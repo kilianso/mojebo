@@ -1,14 +1,13 @@
-export function help(args) {
-	return console.log(args);
-}
+import ModuleManager from "./ModuleManager";
+
+const manager = new ModuleManager(document);
 
 export function initOnReady(element, instance) {
-	document.addEventListener('DOMContentLoaded', () => {
-		const elements = document.querySelectorAll(element);
-		if(elements){
-			elements.forEach((el) => {
-				new instance(el)
-			});
-		}
-	});
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', () => {
+			manager.registerModule(element, instance);
+		});
+	} else {
+		manager.registerModule(element, instance);
+	}
 }
