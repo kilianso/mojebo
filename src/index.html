@@ -7,16 +7,17 @@ position_in_mainnav: 1
 ---
 
 <!-- Include partials like a navigation from the _includes folder. -->
-{% include _modules/_mainnav.html %}
-{% include _submodules/_demo.html %}
+{% include _modules/mainnav/mainnav.html %}
 
 <div class="full-page">
 	<h1>{{page.title}}</h1>
 	<h2>{{page.description}}</h2>
 </div>
 
-<!-- List of all posts -->
+<!-- Demo-Grid module from the modules folder -->
+{% include _modules/demogrid/demogrid.html %}
 
+<!-- List of all posts -->
 <ul>
   {% for post in site.posts %}
     <li>
