@@ -5,7 +5,9 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack --watch --mode development & bundle exec jekyll serve --livereload",
-    "build": "NODE_ENV=production webpack -p --mode production && bundle exec jekyll build"
+    "webpack-build": "NODE_ENV=production webpack -p --mode production",
+    "jekyll-build": "JEKYLL_ENV=production bundle exec jekyll build",
+    "build": "yarn run webpack-build && yarn run jekyll-build"
   },
   "repository": {
     "type": "git",
