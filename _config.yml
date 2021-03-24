@@ -20,7 +20,7 @@ sass:
   # style: compressed
 
 # bind to all IPs, rather than just to localhost
-host: 127.0.0.1
+host: localhost
 
 # Default variables, you can overwrite them in posts or pages frontmatter
 title: The Page Title
