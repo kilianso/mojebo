@@ -5,6 +5,7 @@ _site
 dist
 node_modules
 Gemfile.lock
+package-lock.json
 /src/assets/*.dev.css
 /src/assets/*.dev.js
 /src/assets/*.dev.js.map
