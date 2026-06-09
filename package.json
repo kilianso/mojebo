@@ -41,7 +41,7 @@
   "dependencies": {
     "is-svg": "^4",
     "normalize.css": "^8.0.1",
-    "postcss": "^8.2.1",
+    "postcss": "^8.5.10",
     "ssri": "^8"
   },
   "browserslist": [
