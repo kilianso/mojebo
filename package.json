@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/kilianso/mojebo#readme",
   "devDependencies": {
-    "@babel/core": "^7.12.10",
+    "@babel/core": "^7.29.6",
     "@babel/plugin-transform-spread": "^7.12.1",
     "@babel/preset-env": "^7.6.3",
     "autoprefixer": "^10.2.5",
